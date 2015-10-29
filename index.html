@@ -22,7 +22,7 @@
 
 
     <div class="page-container" ng-show ='isSet(1)'>
-      <h2>Moe's ToDos</h2>
+      <h2>You have {{todos.length}} things to do</h2>
       <ul class="todo-list" ng-repeat='todo in todos track by $index'>
         <li>
           <span> {{ todo }} </span>
@@ -44,7 +44,9 @@
       <ul class="completed-list" ng-repeat='todone in completed track by $index'>
           <li>
             <span> {{ todone }} </span>
+            <button class='bt bt-restore' ng-click='done(todo)'>Restore</button>
           </li>
+      </ul>
     </div>
 
 
