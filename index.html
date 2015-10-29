@@ -40,7 +40,7 @@
 
 
     <div class='completed' ng-show ='isSet(2)'>
-      <h2>Completed tasks</h2>
+      <h2>Completed tasks ({{completed.length}})</h2>
       <ul class="completed-list" ng-repeat='todone in completed track by $index'>
           <li>
             <span> {{ todone }} </span>
