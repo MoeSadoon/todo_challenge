@@ -44,7 +44,7 @@
       <ul class="completed-list" ng-repeat='todone in completed track by $index'>
           <li>
             <span> {{ todone }} </span>
-            <button class='bt bt-restore' ng-click='done(todo)'>Restore</button>
+            <button class='bt bt-restore' ng-click='restore(todone)'>Restore</button>
           </li>
       </ul>
     </div>

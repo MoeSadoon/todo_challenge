@@ -36,8 +36,13 @@ app.controller('toDoCtrl', function($scope) {
     $scope.todos.push(newToDo)
   };
 
-  $scope.keyPress = function(e){
-       console.log(e);
+  $scope.restore = function(todone) {
+
+  var indexOf = $scope.completed.indexOf(todone);
+  if (indexOf !== -1) {
+      $scope.todos.push(todone);
+      $scope.completed.splice(indexOf,1);
   }
+};
 
 });
