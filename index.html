@@ -12,10 +12,16 @@
     <script src="js/app.js"></script>
   </head>
 
-  <body>
-    <div class="page-container" ng-controller='toDoCtrl'>
+  <body ng-controller='toDoCtrl'>
+
+    <ul class="nav nav-pills">
+      <li role="presentation" ng-class="{active: isSet(1)}"><a href="#">Active</a></li>
+      <li role="presentation" ng-class="{active: isSet(2)}"><a href="#">Completed</a></li>
+    </ul>
 
 
+
+    <div class="page-container" >
       <h2>Moe's ToDos</h2>
       <ul class="todo-list" ng-repeat='todo in todos track by $index'>
         <li>
@@ -30,8 +36,18 @@
           <button type="button" class="btn btn-success" ng-click='addToDo(newToDo)'> Add</button>
         </li>
       </ul>
-
     </div>
+
+
+    <div class='completed'>
+      <h2>Completed tasks</h2>
+      <ul class="completed-list" ng-repeat='todone in completed track by $index'>
+          <li>
+            <span> {{ todone }} </span>
+          </li>
+    </div>
+
+
 
   </body>
 
