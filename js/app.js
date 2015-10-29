@@ -42,7 +42,12 @@ app.controller('toDoCtrl', function($scope) {
   if (indexOf !== -1) {
       $scope.todos.push(todone);
       $scope.completed.splice(indexOf,1);
-  }
-};
+    }
+  };
+
+  $scope.clearCompleted = function() {
+    $scope.completed = [ ]
+
+  };
 
 });
