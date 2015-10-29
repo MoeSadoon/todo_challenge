@@ -19,6 +19,11 @@ app.controller('toDoCtrl', function($scope) {
     return $scope.tab === newValue
   };
 
+  $scope.setTab = function(tabName) {
+    $scope.tab = (tabName)
+  };
+
+
   $scope.done = function(todo) {
     var indexOf = $scope.todos.indexOf(todo);
     if (indexOf !== -1) {
