@@ -76,6 +76,13 @@ body {
   text-align: left;
 }
 
+
+.todo-list, .add-todo li .bt {
+  list-style-type: none
+}
+
+
+
 .todo-list li {
   padding: 10px;
   margin: 4px 0;
@@ -97,3 +104,5 @@ body {
 .todo-list li .bt:hover {
   width: 80px;
 }
+
+.
