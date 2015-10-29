@@ -18,7 +18,9 @@ app.controller('toDoCtrl', function($scope) {
   $scope.addToDo = function(newToDo) {
     $scope.todos.push(newToDo)
   };
-// 
 
+  $scope.keyPress = function(e){
+       console.log(e);
+  }
 
 });
