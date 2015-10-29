@@ -27,6 +27,7 @@ app.controller('toDoCtrl', function($scope) {
   $scope.done = function(todo) {
     var indexOf = $scope.todos.indexOf(todo);
     if (indexOf !== -1) {
+        $scope.completed.push(todo);
         $scope.todos.splice(indexOf,1);
     }
   };

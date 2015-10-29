@@ -21,7 +21,7 @@
 
 
 
-    <div class="page-container" >
+    <div class="page-container" ng-show ='isSet(1)'>
       <h2>Moe's ToDos</h2>
       <ul class="todo-list" ng-repeat='todo in todos track by $index'>
         <li>
@@ -39,7 +39,7 @@
     </div>
 
 
-    <div class='completed'>
+    <div class='completed' ng-show ='isSet(2)'>
       <h2>Completed tasks</h2>
       <ul class="completed-list" ng-repeat='todone in completed track by $index'>
           <li>
