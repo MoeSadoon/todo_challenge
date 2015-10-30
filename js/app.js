@@ -5,13 +5,14 @@ app.controller('toDoCtrl', function($scope) {
   $scope.tab = 1;
 
   $scope.todos = [
-    'first',
-    'second',
-    'third',
+    {text:'first', editing: false},
+    {text:'second', editing: false},
+    {text:'third', editing: false}
+
   ];
 
   $scope.completed =[
-    'completed task'
+    {text:'completed task', editing: false}
 
   ];
 
@@ -38,7 +39,7 @@ app.controller('toDoCtrl', function($scope) {
   };
 
   $scope.addToDo = function(newToDo) {
-    $scope.todos.push(newToDo)
+    $scope.todos.push({text:newToDo, editing: false})
   };
 
   $scope.editToDo = function(todo) {
