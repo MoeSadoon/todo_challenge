@@ -37,6 +37,9 @@
         <li>
           <input type="text" class="txt" placeholder="New Todo" ng-model='newToDo' ng-keyup="$event.keyCode == 13 ? enterAndClear(newToDo) : null"/>
           <button type="button" class="btn btn-success" ng-click='addToDo(newToDo); clear()'> Add</button>
+          <button type="button" class="btn btn-info" ng-click='clearActive()'
+          ng-hide='todos.length === 0'>
+            Clear active</button>
         </li>
       </ul>
     </div>

@@ -65,5 +65,13 @@ app.controller('toDoCtrl', function($scope) {
 
   };
 
+  $scope.clearActive = function() {
+    $scope.todos = []
+  };
+
+  $scope.clearCompleted = function() {
+    $scope.completed = []
+  };
+
 
 });

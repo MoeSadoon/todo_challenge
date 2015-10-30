@@ -61,6 +61,15 @@ body {
 
 }
 
+.btn.btn-info {
+  color: #fff;
+  background-color: #1C6684;
+  border-color: #d58512;
+  width: 1090px;
+  max-width: 100%;
+
+}
+
 .txt {
   background: transparent;
   width: 100%;
