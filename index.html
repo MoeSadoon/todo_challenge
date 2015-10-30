@@ -17,7 +17,7 @@
     <ul class="nav nav-pills">
       <li role="presentation" ng-class="{active: isSet(1)}"><a href ng-click="setTab(1)">Active</a></li>
       <li role="presentation" ng-class="{active: isSet(2)}"><a href ng-click="setTab(2)">Completed</a></li>
-      <li role="presentation" class="btn btn-danger"> <a href ng-click="setTab(2)">Reset</a></li>
+      <li role="presentation" class='reset'> <a href ng-click="reset(); setTab(1)">Reset</a></li>
 
     </ul>
 

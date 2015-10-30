@@ -51,8 +51,13 @@ app.controller('toDoCtrl', function($scope) {
   };
 
   $scope.clear = function() {
-    $scope.newToDo = null;
-}
+    $scope.newToDo = null
+  };
+
+  $scope.reset = function() {
+    $scope.todos = [];
+    $scope.completed = [];
+  };
 
 
 });
