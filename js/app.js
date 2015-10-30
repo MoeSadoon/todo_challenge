@@ -15,6 +15,8 @@ app.controller('toDoCtrl', function($scope) {
 
   ];
 
+  $scope.editedTodo = null;
+
 
   $scope.date = new Date();
 
@@ -37,6 +39,18 @@ app.controller('toDoCtrl', function($scope) {
 
   $scope.addToDo = function(newToDo) {
     $scope.todos.push(newToDo)
+  };
+
+  $scope.editToDo = function(todo) {
+    todo.editing=true;
+    $scope.editedTodo = todo;
+
+  };
+
+  $scope.doneEditing = function(todo) {
+    todo.editing=false;
+    $scope.editedTodo = null;
+
   };
 
   $scope.restore = function(todone) {
