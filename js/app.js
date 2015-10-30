@@ -50,4 +50,9 @@ app.controller('toDoCtrl', function($scope) {
 
   };
 
+  $scope.clear = function() {
+    $scope.newToDo = null;
+}
+
+
 });
