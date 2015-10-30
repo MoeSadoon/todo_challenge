@@ -25,17 +25,17 @@
 
     <div class="page-container" ng-show ='isSet(1)'>
       <h4>{{date | date:'medium'}}</h4>
-      <h2>You have {{todos.length}} thing to do</h2>
+      <h2>You have {{todos.length}} thing(s) to do</h2>
       <ul class="todo-list" ng-repeat='todo in todos track by $index'>
         <li ng-dblclick='editToDo(todo)'>
           <span ng-hide='todo.editing'> {{ todo.text }} </span>
+
           <form ng-submit='doneEditing(todo)' ng-show='todo.editing'>
             <input ng-model='todo.text'>
           </form>
           <button class='bt bt-achieve' ng-click='done(todo)' >Done</button>
           <button type="button" class="glyphicon glyphicon-remove"
-          style="color:red; background-color: inherit" ng-click='delete($index); clear()'></button>
-
+          style="color:red; background-color: inherit; float: right; margin-right: -47px" ng-click='delete($index); clear()'></button>
 
         </li>
       </ul>
