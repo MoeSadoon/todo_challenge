@@ -16,6 +16,9 @@ app.controller('toDoCtrl', function($scope) {
 
   ];
 
+
+  $scope.allToDos = $scope.todos.concat($scope.completed);
+
   $scope.editedTodo = null;
 
 
@@ -40,6 +43,7 @@ app.controller('toDoCtrl', function($scope) {
 
   $scope.addToDo = function(newToDo) {
     $scope.todos.push({text:newToDo, editing: false})
+
   };
 
   $scope.editToDo = function(todo) {

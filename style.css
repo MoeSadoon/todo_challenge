@@ -14,7 +14,8 @@ body {
   background-attachment: scroll;
   background-clip: border-box;
   background-color: white;
-  background-image: url(http://opengameart.org/sites/default/files/styles/watermarked/public/SpaceBackground1.png);
+  background-image: url(./public/images/space.png);
+  /*image url = http://opengameart.org/sites/default/files/styles/watermarked/public/SpaceBackground1.png*/
   background-origin: padding-box;
   background-size: auto;
 }
@@ -107,6 +108,17 @@ body {
   font-weight: 900;
 }
 
+.all {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.all h2 {
+  text-align: center;
+  font-weight: 900;
+}
+
+
 .add-todo .txt {
   padding: 10px;
 }
@@ -125,6 +137,10 @@ body {
   list-style-type: none
 }
 
+.all, .add-todo li .bt {
+  list-style-type: none
+}
+
 
 
 .todo-list li {
@@ -137,6 +153,16 @@ body {
   cursor: pointer;
 }
 .completed-list li {
+  padding: 10px;
+  margin: 4px 0;
+  border: 1px solid #9dc9a8;
+  width: 90%;
+  position: relative;
+  min-height: 100%;
+  cursor: pointer;
+}
+
+.all li {
   padding: 10px;
   margin: 4px 0;
   border: 1px solid #9dc9a8;
@@ -162,6 +188,13 @@ body {
   transition: width 0.4s ease-in-out;
 }
 
+.all li .bt {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  transition: width 0.4s ease-in-out;
+}
 
 .todo-list li .bt:hover {
   width: 100px;
