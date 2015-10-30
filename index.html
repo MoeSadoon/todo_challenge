@@ -24,6 +24,7 @@
 
 
     <div class="page-container" ng-show ='isSet(1)'>
+      <h4>You have {{todos.length}} things to do</h4>
       <h2>You have {{todos.length}} things to do</h2>
       <ul class="todo-list" ng-repeat='todo in todos track by $index'>
         <li>
@@ -34,7 +35,7 @@
 
       <ul class="add-todo">
         <li>
-          <input type="text" class="txt" placeholder="New Todo" ng-model='newToDo'  />
+          <input type="text" class="txt" placeholder="New Todo" ng-model='newToDo' ng-keyup="$event.keyCode == 13 ? enterAndClear(newToDo) : null"/>
           <button type="button" class="btn btn-success" ng-click='addToDo(newToDo); clear()'> Add</button>
         </li>
       </ul>
