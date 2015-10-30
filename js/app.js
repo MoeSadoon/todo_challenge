@@ -15,6 +15,9 @@ app.controller('toDoCtrl', function($scope) {
 
   ];
 
+
+  $scope.date = new Date();
+
   $scope.isSet = function(newValue) {
     return $scope.tab === newValue
   };

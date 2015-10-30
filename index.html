@@ -24,7 +24,7 @@
 
 
     <div class="page-container" ng-show ='isSet(1)'>
-      <h4>You have {{todos.length}} things to do</h4>
+      <h4>{{date | date:'medium'}}</h4>
       <h2>You have {{todos.length}} things to do</h2>
       <ul class="todo-list" ng-repeat='todo in todos track by $index'>
         <li>
