@@ -54,6 +54,10 @@ app.controller('toDoCtrl', function($scope) {
 
   };
 
+  $scope.delete = function(index) {
+    $scope.todos.splice(index, 1)
+  };
+
   $scope.restore = function(todone) {
 
   var indexOf = $scope.completed.indexOf(todone);

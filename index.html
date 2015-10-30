@@ -33,6 +33,10 @@
             <input ng-model='todo.text'>
           </form>
           <button class='bt bt-achieve' ng-click='done(todo)' >Done</button>
+          <button type="button" class="glyphicon glyphicon-remove"
+          style="color:red; background-color: inherit" ng-click='delete($index); clear()'></button>
+
+
         </li>
       </ul>
 
